@@ -1,11 +1,11 @@
 import {useState} from "react";
-import React, {Component} from 'react';
+import React from 'react';
 import style from './MainPages.module.scss'
 import tracksList from '../../assets/trackList'
 import Track from '../../components/Track/Track'
 import {Input} from '@mui/material'
 
-import track from "../../components/Track/Track";
+
 
 const runSearch = (query) => {
     if (!query) {

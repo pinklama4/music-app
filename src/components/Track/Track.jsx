@@ -1,4 +1,4 @@
-import React, {Component, useContext} from 'react';
+import React, {useContext} from 'react';
 import {AudioContext} from "../../context/AudioContext";
 import style from './Track.module.scss'
 import { IconButton } from '@mui/material'
@@ -7,7 +7,7 @@ import secondsToMMSS from "../../units/secondsToMMSS";
 import cn from 'classnames'
 
 const Track = (track) => {
-    const  {id, src, preview, title, artists, duration } = track
+    const  {preview, title, artists, duration } = track
     const { handleToggleAudio, currentTrack, isPlaying } = useContext(AudioContext)
     const isCurrentTrack = currentTrack.id === track.id
     const formattedDuration = secondsToMMSS(duration);
